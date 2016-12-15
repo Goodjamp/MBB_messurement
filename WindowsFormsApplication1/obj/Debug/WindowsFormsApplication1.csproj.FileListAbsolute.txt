@@ -1,0 +1,44 @@
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Private\Програмирование\Системное\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ov7670_procesing.Form1.resources
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ov7670_procesing.Form1.resources
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Privat\Програмирование примеры\Системное\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ov7670_procesing.Form1.resources
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ov7670_procesing.Form1.resources
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\aleks.gerasimchuk\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Privat\Programing_example\System\Примеры C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.Form1.resources

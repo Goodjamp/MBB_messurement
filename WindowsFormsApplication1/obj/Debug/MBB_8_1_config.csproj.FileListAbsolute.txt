@@ -1,0 +1,9 @@
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.Form1.resources
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.csproj.GenerateResource.Cache
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.csprojResolveAssemblyReference.cache
