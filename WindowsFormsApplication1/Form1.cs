@@ -67,11 +67,12 @@ namespace MBB_8_1_config
         // Mutex for axec "code" rezult
          Mutex mutex_code = new Mutex();
         // class for processing calibration in case of two MBB
-         calibProcessing calibMBB;
+         calibProcessing calibMBB = new calibProcessing(10);
         // struct for processing current code rezult
         S_current_code_rezult s_current_code_rezult = new S_current_code_rezult(0); 
         //Calib data array
         List<List<double>> calib_data = new List<List<double>>();
+
 
 
         //protected access to cross-thread wariables
@@ -307,13 +308,15 @@ namespace MBB_8_1_config
         public void callbackReceiveCalibration(int req_num, ref byte[] byte_data)
         {
             String SCurrentMes = "0", SForFile;
+            int numTempPoint = 0, umGlobPoint = 0;
+            double currentVoltmeter = 0, currentMBB = 0, mbbCode = 0, diffCurrent = 0;
 
             if ( labelFreqVal.InvokeRequired || labelCurrentVal.InvokeRequired ||
                  calibGrid.InvokeRequired || calibMBBCode.InvokeRequired ||
-                 numGlobalPoint.InvokeRequired || numTempPoint.InvokeRequired )
+                 lableNumGlobalPoint.InvokeRequired || lableNumTempPoint.InvokeRequired )
             {
-                modbus_master_callback rez_resp_I_F = callback_receive_I_F;
-                Invoke(rez_resp_I_F, req_num, byte_data);
+                modbus_master_callback rezCallbackReceiveCalibration = callbackReceiveCalibration;
+                Invoke(rezCallbackReceiveCalibration, req_num, byte_data);
             }
             else
             {
@@ -325,9 +328,24 @@ namespace MBB_8_1_config
                 float F_mes_float = F_mes;
                 F_mes_float = F_mes_float / 1000;
 
-                this.calibMBB.addNewData(req_num, I_mes, I_code); 
+                // if new pair data is Rx
+                if (this.calibMBB.addNewData(req_num, I_mes, I_code, ref numTempPoint, ref umGlobPoint, ref currentVoltmeter, ref currentMBB, ref mbbCode, ref diffCurrent)) { 
+                    //Show point counter
+                    this.lableNumGlobalPoint.Text = Convert.ToString(umGlobPoint);
+                    this.lableNumTempPoint.Text = Convert.ToString(numTempPoint);
+                    // Add new data to the greed
+                    calibGrid.Rows.Add(umGlobPoint, currentVoltmeter, currentMBB, mbbCode, diffCurrent);
+                    if (this.calibMBB.getCurrentPointFull()) 
+                    {
+                        this.buttonStopCollect.Checked = true;
+                        this.buttonCalc.Enabled = true;
+                        MessageBox.Show("Set new current value", "Information",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
+                }
 
-                // Show rez meas data
+                // Show rez measurement data
                 this.labelCurrentVal.Text = Convert.ToString(I_mes);
                 this.labelFreqVal.Text = Convert.ToString(F_mes_float);
                 this.labelCurrentCode.Text = Convert.ToString(I_code);
@@ -442,18 +460,8 @@ namespace MBB_8_1_config
         private void buttonAddCalibRequest_Click(object sender, EventArgs e)
         {
             int numberPointPerOneCurent;
-            //Add request to VOLTMETER
-            createRequest(calibVoltAddres.Text,
-                         calibModBusFun.Text,
-                         calibModBusRegAddress.Text,
-                         calibNumReg.Text,
-                         callbackReceiveCalibration);           
-            //Add request to MBB
-            createRequest(calibMBBAddress.Text,
-                         calibModBusFun.Text,
-                         calibModBusRegAddress.Text,
-                         calibNumReg.Text,
-                         callbackReceiveCalibration);
+            UInt16 numCalibPoint;
+            // Set number calibration poin per one current value
             try
             {
                 numberPointPerOneCurent = Convert.ToUInt16(calibNumPoinCalib.Text);
@@ -465,11 +473,32 @@ namespace MBB_8_1_config
                 MessageBoxIcon.Error);
                 return;
             }
-            calibProcessing calibMBB = new calibProcessing(numberPointPerOneCurent);
+            // Set number of point per one current value
+            calibMBB.calibSetMaxNumberTempData(numberPointPerOneCurent);
+            //Add request to VOLTMETER
+            if (!createRequest(calibVoltAddres.Text,
+                         calibModBusFun.Text,
+                         calibModBusRegAddress.Text,
+                         calibNumReg.Text,
+                         callbackReceiveCalibration))
+            {
+               
+            }       
+            //Add request to MBB
+            if (!createRequest(calibMBBAddress.Text,
+                         calibModBusFun.Text,
+                         calibModBusRegAddress.Text,
+                         calibNumReg.Text,
+                         callbackReceiveCalibration))
+            {
+
+            }
+            // Chacked START button
+            this.buttonStartCollect.Checked = true;
         }
 
 
-        private void createRequest(string inDevAddress, string inFun, string inDataAddress, string inNumData, modbus_master_callback fCallBack)
+        private bool createRequest(string inDevAddress, string inFun, string inDataAddress, string inNumData, modbus_master_callback fCallBack)
         {
             UInt16 DevAddress, Function, DataAddress, NumData;
 
@@ -485,7 +514,7 @@ namespace MBB_8_1_config
                 MessageBox.Show("Not number ", "Error Request paramiters",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
-                return;
+                return false;
             }
             // Add new request
             
@@ -493,43 +522,42 @@ namespace MBB_8_1_config
                                       Function,
                                       DataAddress,
                                       NumData,
-                                      fCallBack); 
+                                      fCallBack);
+            return true;
         }
 
-        private void buttonStatCalib_CheckedChanged(object sender, EventArgs e)
-        {
-            changeStopStart(calibState.buttonStart);
-        }
-        
 
-        private void buttonStopCalib_CheckedChanged(object sender, EventArgs e)
+        private void buttonStopCallect_CheckedChanged(object sender, EventArgs e)
         {
             changeStopStart(calibState.buttonStop);
         }
+
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            changeStopStart(calibState.buttonStart);
+        }
+
 
 
         private void changeStopStart(calibState pressButton)
         {
             switch(pressButton)
             {
-                case (calibState.buttonStart): 
-                    if (this.buttonStartCalib.Checked)
+                case (calibState.buttonStart):
+                    if (this.buttonStartCollect.Checked == true)
                     {
-                        this.buttonStopCalib.Checked = false;
-                    }
-                    else
-                    {
-                        this.buttonStartCalib.Checked = true;
+                        this.buttonCalc.Enabled = false;
+                        calibMBB.clearTempCounter();
+                        break;
                     }
                     break;
-                case(calibState.buttonStop): 
-                    if(this.buttonStopCalib.Checked)
+                case(calibState.buttonStop):
+                    if (this.buttonStopCollect.Checked == true)
                     {
-                        this.buttonStartCalib.Checked = false;
-                    }
-                    else
-                    {
-                         this.buttonStartCalib.Checked = true;
+                        this.buttonCalc.Enabled = true;
+                        break;                        
                     }
                     break;
                 default: break;
@@ -547,6 +575,8 @@ namespace MBB_8_1_config
         {
 
         }
+
+
 
     }// end partial class "Form1"
 

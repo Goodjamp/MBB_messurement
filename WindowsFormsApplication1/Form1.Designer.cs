@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_START = new System.Windows.Forms.Button();
             this.comboBox_SelPort = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,9 +93,9 @@
             this.buttonRestore = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.buttonStartCalib = new System.Windows.Forms.CheckBox();
-            this.buttonStopCalib = new System.Windows.Forms.CheckBox();
+            this.buttonStartCollect = new System.Windows.Forms.RadioButton();
             this.buttonCalc = new System.Windows.Forms.Button();
+            this.buttonStopCollect = new System.Windows.Forms.RadioButton();
             this.buttonRemoveCalibPoint = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.bLineKoef = new System.Windows.Forms.Label();
@@ -125,9 +125,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.numTempPoint = new System.Windows.Forms.Label();
+            this.lableNumTempPoint = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.numGlobalPoint = new System.Windows.Forms.Label();
+            this.lableNumGlobalPoint = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.calibMBBCode = new System.Windows.Forms.Label();
             this.buttonAddPoint = new System.Windows.Forms.Button();
@@ -162,9 +162,10 @@
             // 
             this.button_START.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_START.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_START.Location = new System.Drawing.Point(9, 134);
+            this.button_START.Location = new System.Drawing.Point(12, 165);
+            this.button_START.Margin = new System.Windows.Forms.Padding(4);
             this.button_START.Name = "button_START";
-            this.button_START.Size = new System.Drawing.Size(78, 26);
+            this.button_START.Size = new System.Drawing.Size(104, 32);
             this.button_START.TabIndex = 1;
             this.button_START.Text = "start";
             this.button_START.UseVisualStyleBackColor = true;
@@ -199,9 +200,10 @@
             "COM23",
             "COM24",
             "COM25"});
-            this.comboBox_SelPort.Location = new System.Drawing.Point(9, 46);
+            this.comboBox_SelPort.Location = new System.Drawing.Point(12, 57);
+            this.comboBox_SelPort.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_SelPort.Name = "comboBox_SelPort";
-            this.comboBox_SelPort.Size = new System.Drawing.Size(78, 21);
+            this.comboBox_SelPort.Size = new System.Drawing.Size(103, 24);
             this.comboBox_SelPort.TabIndex = 2;
             this.comboBox_SelPort.Text = "COM23";
             // 
@@ -210,9 +212,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Location = new System.Drawing.Point(8, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "COM";
             // 
@@ -221,9 +224,10 @@
             this.button_STOP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_STOP.Enabled = false;
             this.button_STOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_STOP.Location = new System.Drawing.Point(93, 134);
+            this.button_STOP.Location = new System.Drawing.Point(124, 165);
+            this.button_STOP.Margin = new System.Windows.Forms.Padding(4);
             this.button_STOP.Name = "button_STOP";
-            this.button_STOP.Size = new System.Drawing.Size(77, 26);
+            this.button_STOP.Size = new System.Drawing.Size(103, 32);
             this.button_STOP.TabIndex = 4;
             this.button_STOP.Text = "stop";
             this.button_STOP.UseVisualStyleBackColor = true;
@@ -234,9 +238,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(892, 634);
+            this.label6.Location = new System.Drawing.Point(1189, 780);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 29;
             // 
             // label_SPEED
@@ -244,9 +249,10 @@
             this.label_SPEED.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_SPEED.AutoSize = true;
             this.label_SPEED.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_SPEED.Location = new System.Drawing.Point(90, 30);
+            this.label_SPEED.Location = new System.Drawing.Point(120, 37);
+            this.label_SPEED.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_SPEED.Name = "label_SPEED";
-            this.label_SPEED.Size = new System.Drawing.Size(48, 13);
+            this.label_SPEED.Size = new System.Drawing.Size(59, 17);
             this.label_SPEED.TabIndex = 32;
             this.label_SPEED.Text = "SPEED";
             // 
@@ -261,9 +267,10 @@
             "28800",
             "38400",
             "57600"});
-            this.comboBox_SelSpeed.Location = new System.Drawing.Point(93, 46);
+            this.comboBox_SelSpeed.Location = new System.Drawing.Point(124, 57);
+            this.comboBox_SelSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_SelSpeed.Name = "comboBox_SelSpeed";
-            this.comboBox_SelSpeed.Size = new System.Drawing.Size(78, 21);
+            this.comboBox_SelSpeed.Size = new System.Drawing.Size(103, 24);
             this.comboBox_SelSpeed.TabIndex = 31;
             this.comboBox_SelSpeed.Text = "9600";
             // 
@@ -272,20 +279,21 @@
             this.chartI_N.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.AxisX.Interval = 5D;
-            chartArea4.AxisX.Minimum = 0D;
-            chartArea4.Name = "ChartArea1";
-            this.chartI_N.ChartAreas.Add(chartArea4);
-            this.chartI_N.Location = new System.Drawing.Point(3, 3);
+            chartArea1.AxisX.Interval = 5D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.Name = "ChartArea1";
+            this.chartI_N.ChartAreas.Add(chartArea1);
+            this.chartI_N.Location = new System.Drawing.Point(4, 4);
+            this.chartI_N.Margin = new System.Windows.Forms.Padding(4);
             this.chartI_N.Name = "chartI_N";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.MarkerBorderColor = System.Drawing.Color.Red;
-            series4.MarkerColor = System.Drawing.Color.Red;
-            series4.MarkerSize = 2;
-            series4.Name = "Series1";
-            this.chartI_N.Series.Add(series4);
-            this.chartI_N.Size = new System.Drawing.Size(820, 509);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.MarkerBorderColor = System.Drawing.Color.Red;
+            series1.MarkerColor = System.Drawing.Color.Red;
+            series1.MarkerSize = 2;
+            series1.Name = "Series1";
+            this.chartI_N.Series.Add(series1);
+            this.chartI_N.Size = new System.Drawing.Size(1093, 626);
             this.chartI_N.TabIndex = 36;
             this.chartI_N.Text = "chartData";
             // 
@@ -302,26 +310,30 @@
             this.groupBox1.Controls.Add(this.comboBox_SelSpeed);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label_SPEED);
-            this.groupBox1.Location = new System.Drawing.Point(855, 13);
+            this.groupBox1.Location = new System.Drawing.Point(1140, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 175);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(236, 215);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connection paramiters";
             // 
             // textBoxTimeRequest
             // 
-            this.textBoxTimeRequest.Location = new System.Drawing.Point(93, 97);
+            this.textBoxTimeRequest.Location = new System.Drawing.Point(124, 119);
+            this.textBoxTimeRequest.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTimeRequest.Name = "textBoxTimeRequest";
-            this.textBoxTimeRequest.Size = new System.Drawing.Size(78, 20);
+            this.textBoxTimeRequest.Size = new System.Drawing.Size(103, 22);
             this.textBoxTimeRequest.TabIndex = 41;
             this.textBoxTimeRequest.Text = "500";
             // 
             // textBoxTimeout
             // 
-            this.textBoxTimeout.Location = new System.Drawing.Point(9, 97);
+            this.textBoxTimeout.Location = new System.Drawing.Point(12, 119);
+            this.textBoxTimeout.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTimeout.Name = "textBoxTimeout";
-            this.textBoxTimeout.Size = new System.Drawing.Size(78, 20);
+            this.textBoxTimeout.Size = new System.Drawing.Size(103, 22);
             this.textBoxTimeout.TabIndex = 40;
             this.textBoxTimeout.Text = "1000";
             // 
@@ -330,9 +342,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(90, 81);
+            this.label2.Location = new System.Drawing.Point(120, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 39;
             this.label2.Text = "TIMREQUES";
             // 
@@ -341,9 +354,10 @@
             this.labelTimeout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTimeout.AutoSize = true;
             this.labelTimeout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTimeout.Location = new System.Drawing.Point(6, 81);
+            this.labelTimeout.Location = new System.Drawing.Point(8, 100);
+            this.labelTimeout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTimeout.Name = "labelTimeout";
-            this.labelTimeout.Size = new System.Drawing.Size(63, 13);
+            this.labelTimeout.Size = new System.Drawing.Size(77, 17);
             this.labelTimeout.TabIndex = 33;
             this.labelTimeout.Text = "TIMEOUT";
             // 
@@ -359,34 +373,39 @@
             this.groupBox2.Controls.Add(this.comboBoxFunction);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(855, 206);
+            this.groupBox2.Location = new System.Drawing.Point(1140, 254);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(177, 175);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(236, 215);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Request paramiters";
             // 
             // textBoxDevAddress
             // 
-            this.textBoxDevAddress.Location = new System.Drawing.Point(9, 47);
+            this.textBoxDevAddress.Location = new System.Drawing.Point(12, 58);
+            this.textBoxDevAddress.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDevAddress.Name = "textBoxDevAddress";
-            this.textBoxDevAddress.Size = new System.Drawing.Size(78, 20);
+            this.textBoxDevAddress.Size = new System.Drawing.Size(103, 22);
             this.textBoxDevAddress.TabIndex = 41;
             this.textBoxDevAddress.Text = "1";
             // 
             // textBoxNumData
             // 
-            this.textBoxNumData.Location = new System.Drawing.Point(93, 97);
+            this.textBoxNumData.Location = new System.Drawing.Point(124, 119);
+            this.textBoxNumData.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNumData.Name = "textBoxNumData";
-            this.textBoxNumData.Size = new System.Drawing.Size(78, 20);
+            this.textBoxNumData.Size = new System.Drawing.Size(103, 22);
             this.textBoxNumData.TabIndex = 41;
-            this.textBoxNumData.Text = "2";
+            this.textBoxNumData.Text = "6";
             // 
             // textBoxDataAddress
             // 
-            this.textBoxDataAddress.Location = new System.Drawing.Point(9, 97);
+            this.textBoxDataAddress.Location = new System.Drawing.Point(12, 119);
+            this.textBoxDataAddress.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDataAddress.Name = "textBoxDataAddress";
-            this.textBoxDataAddress.Size = new System.Drawing.Size(78, 20);
+            this.textBoxDataAddress.Size = new System.Drawing.Size(103, 22);
             this.textBoxDataAddress.TabIndex = 40;
             this.textBoxDataAddress.Text = "529";
             // 
@@ -395,9 +414,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(90, 81);
+            this.label3.Location = new System.Drawing.Point(120, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(74, 17);
             this.label3.TabIndex = 39;
             this.label3.Text = "NumData";
             // 
@@ -406,9 +426,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(6, 81);
+            this.label4.Location = new System.Drawing.Point(8, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 33;
             this.label4.Text = "DataAddress";
             // 
@@ -416,9 +437,10 @@
             // 
             this.buttonAddRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddRequest.Location = new System.Drawing.Point(9, 134);
+            this.buttonAddRequest.Location = new System.Drawing.Point(12, 165);
+            this.buttonAddRequest.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddRequest.Name = "buttonAddRequest";
-            this.buttonAddRequest.Size = new System.Drawing.Size(161, 26);
+            this.buttonAddRequest.Size = new System.Drawing.Size(215, 32);
             this.buttonAddRequest.TabIndex = 1;
             this.buttonAddRequest.Text = "Add Request";
             this.buttonAddRequest.UseVisualStyleBackColor = true;
@@ -434,9 +456,10 @@
             "3",
             "4",
             "5"});
-            this.comboBoxFunction.Location = new System.Drawing.Point(93, 46);
+            this.comboBoxFunction.Location = new System.Drawing.Point(124, 57);
+            this.comboBoxFunction.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxFunction.Name = "comboBoxFunction";
-            this.comboBoxFunction.Size = new System.Drawing.Size(78, 21);
+            this.comboBoxFunction.Size = new System.Drawing.Size(103, 24);
             this.comboBoxFunction.TabIndex = 31;
             this.comboBoxFunction.Text = "3";
             // 
@@ -445,9 +468,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(6, 30);
+            this.label5.Location = new System.Drawing.Point(8, 37);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "DevAddress";
             // 
@@ -456,9 +480,10 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(90, 30);
+            this.label7.Location = new System.Drawing.Point(120, 37);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(70, 17);
             this.label7.TabIndex = 32;
             this.label7.Text = "Function";
             // 
@@ -466,9 +491,10 @@
             // 
             this.labelCurrentVal.AutoSize = true;
             this.labelCurrentVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCurrentVal.Location = new System.Drawing.Point(43, 28);
+            this.labelCurrentVal.Location = new System.Drawing.Point(57, 34);
+            this.labelCurrentVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrentVal.Name = "labelCurrentVal";
-            this.labelCurrentVal.Size = new System.Drawing.Size(61, 25);
+            this.labelCurrentVal.Size = new System.Drawing.Size(76, 29);
             this.labelCurrentVal.TabIndex = 40;
             this.labelCurrentVal.Text = "0.000";
             // 
@@ -476,9 +502,10 @@
             // 
             this.labelCurrenName.AutoSize = true;
             this.labelCurrenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCurrenName.Location = new System.Drawing.Point(8, 28);
+            this.labelCurrenName.Location = new System.Drawing.Point(11, 34);
+            this.labelCurrenName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrenName.Name = "labelCurrenName";
-            this.labelCurrenName.Size = new System.Drawing.Size(29, 25);
+            this.labelCurrenName.Size = new System.Drawing.Size(34, 29);
             this.labelCurrenName.TabIndex = 41;
             this.labelCurrenName.Text = "I=";
             // 
@@ -486,9 +513,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(115, 28);
+            this.label10.Location = new System.Drawing.Point(153, 34);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 25);
+            this.label10.Size = new System.Drawing.Size(52, 29);
             this.label10.TabIndex = 45;
             this.label10.Text = "mA";
             // 
@@ -499,9 +527,11 @@
             this.groupBox3.Controls.Add(this.labelCurrentVal);
             this.groupBox3.Controls.Add(this.labelCurrenName);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(178, 554);
+            this.groupBox3.Location = new System.Drawing.Point(237, 682);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(159, 70);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(212, 86);
             this.groupBox3.TabIndex = 46;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current from MBB";
@@ -513,9 +543,11 @@
             this.groupBox4.Controls.Add(this.labelFreqVal);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(25, 554);
+            this.groupBox4.Location = new System.Drawing.Point(33, 682);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(145, 70);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(193, 86);
             this.groupBox4.TabIndex = 47;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Frequency";
@@ -524,9 +556,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(106, 28);
+            this.label9.Location = new System.Drawing.Point(141, 34);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 25);
+            this.label9.Size = new System.Drawing.Size(44, 29);
             this.label9.TabIndex = 44;
             this.label9.Text = "Hz";
             // 
@@ -534,9 +567,10 @@
             // 
             this.labelFreqVal.AutoSize = true;
             this.labelFreqVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFreqVal.Location = new System.Drawing.Point(41, 28);
+            this.labelFreqVal.Location = new System.Drawing.Point(55, 34);
+            this.labelFreqVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFreqVal.Name = "labelFreqVal";
-            this.labelFreqVal.Size = new System.Drawing.Size(61, 25);
+            this.labelFreqVal.Size = new System.Drawing.Size(76, 29);
             this.labelFreqVal.TabIndex = 42;
             this.labelFreqVal.Text = "0.000";
             // 
@@ -544,9 +578,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(6, 28);
+            this.label8.Location = new System.Drawing.Point(8, 34);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 25);
+            this.label8.Size = new System.Drawing.Size(43, 29);
             this.label8.TabIndex = 43;
             this.label8.Text = "F=";
             // 
@@ -557,20 +592,22 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 7);
+            this.tabControl1.Location = new System.Drawing.Point(16, 9);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(837, 541);
+            this.tabControl1.Size = new System.Drawing.Size(1116, 666);
             this.tabControl1.TabIndex = 50;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.chartI_N);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(829, 515);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1108, 637);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "I=f(N)";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -579,10 +616,11 @@
             // 
             this.tabPage2.Controls.Add(this.chartF_N);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(829, 515);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1108, 637);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "F=f(N)";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -592,20 +630,21 @@
             this.chartF_N.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea5.AxisX.Interval = 5D;
-            chartArea5.AxisX.Minimum = 0D;
-            chartArea5.Name = "ChartArea1";
-            this.chartF_N.ChartAreas.Add(chartArea5);
-            this.chartF_N.Location = new System.Drawing.Point(4, 3);
+            chartArea2.AxisX.Interval = 5D;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.Name = "ChartArea1";
+            this.chartF_N.ChartAreas.Add(chartArea2);
+            this.chartF_N.Location = new System.Drawing.Point(5, 4);
+            this.chartF_N.Margin = new System.Windows.Forms.Padding(4);
             this.chartF_N.Name = "chartF_N";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.MarkerBorderColor = System.Drawing.Color.Red;
-            series5.MarkerColor = System.Drawing.Color.Red;
-            series5.MarkerSize = 2;
-            series5.Name = "Series1";
-            this.chartF_N.Series.Add(series5);
-            this.chartF_N.Size = new System.Drawing.Size(820, 509);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.MarkerBorderColor = System.Drawing.Color.Red;
+            series2.MarkerColor = System.Drawing.Color.Red;
+            series2.MarkerSize = 2;
+            series2.Name = "Series1";
+            this.chartF_N.Series.Add(series2);
+            this.chartF_N.Size = new System.Drawing.Size(1093, 626);
             this.chartF_N.TabIndex = 37;
             this.chartF_N.Text = "chartData";
             // 
@@ -613,10 +652,11 @@
             // 
             this.tabPage3.Controls.Add(this.chartI_F);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(829, 515);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(1108, 637);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "I=f(F)";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -626,21 +666,22 @@
             this.chartI_F.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea6.AxisX.Interval = 5D;
-            chartArea6.AxisX.Maximum = 150D;
-            chartArea6.AxisX.Minimum = 0D;
-            chartArea6.Name = "ChartArea1";
-            this.chartI_F.ChartAreas.Add(chartArea6);
-            this.chartI_F.Location = new System.Drawing.Point(4, 3);
+            chartArea3.AxisX.Interval = 5D;
+            chartArea3.AxisX.Maximum = 150D;
+            chartArea3.AxisX.Minimum = 0D;
+            chartArea3.Name = "ChartArea1";
+            this.chartI_F.ChartAreas.Add(chartArea3);
+            this.chartI_F.Location = new System.Drawing.Point(5, 4);
+            this.chartI_F.Margin = new System.Windows.Forms.Padding(4);
             this.chartI_F.Name = "chartI_F";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.MarkerBorderColor = System.Drawing.Color.Red;
-            series6.MarkerColor = System.Drawing.Color.Red;
-            series6.MarkerSize = 2;
-            series6.Name = "Series1";
-            this.chartI_F.Series.Add(series6);
-            this.chartI_F.Size = new System.Drawing.Size(820, 509);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.MarkerBorderColor = System.Drawing.Color.Red;
+            series3.MarkerColor = System.Drawing.Color.Red;
+            series3.MarkerSize = 2;
+            series3.Name = "Series1";
+            this.chartI_F.Series.Add(series3);
+            this.chartI_F.Size = new System.Drawing.Size(1093, 626);
             this.chartI_F.TabIndex = 37;
             this.chartI_F.Text = "chartData";
             // 
@@ -653,10 +694,11 @@
             this.tabPage4.Controls.Add(this.buttonSaveCalib);
             this.tabPage4.Controls.Add(this.buttonAddCalib);
             this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(829, 515);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Size = new System.Drawing.Size(1108, 637);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Calib with voltage source";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -665,9 +707,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(67, 112);
+            this.label11.Location = new System.Drawing.Point(89, 138);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 25);
+            this.label11.Size = new System.Drawing.Size(255, 29);
             this.label11.TabIndex = 60;
             this.label11.Text = "Table calibration data";
             // 
@@ -678,11 +721,12 @@
             this.Number,
             this.Code,
             this.Current});
-            this.dataGridViewCalibData.Location = new System.Drawing.Point(9, 140);
+            this.dataGridViewCalibData.Location = new System.Drawing.Point(12, 172);
+            this.dataGridViewCalibData.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewCalibData.Name = "dataGridViewCalibData";
             this.dataGridViewCalibData.ReadOnly = true;
             this.dataGridViewCalibData.RowHeadersVisible = false;
-            this.dataGridViewCalibData.Size = new System.Drawing.Size(344, 369);
+            this.dataGridViewCalibData.Size = new System.Drawing.Size(459, 454);
             this.dataGridViewCalibData.TabIndex = 59;
             // 
             // Number
@@ -712,9 +756,11 @@
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox7.Controls.Add(this.labelNumPoints);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox7.Location = new System.Drawing.Point(423, 8);
+            this.groupBox7.Location = new System.Drawing.Point(564, 10);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(89, 55);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Size = new System.Drawing.Size(119, 68);
             this.groupBox7.TabIndex = 58;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Num points";
@@ -723,9 +769,10 @@
             // 
             this.labelNumPoints.AutoSize = true;
             this.labelNumPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNumPoints.Location = new System.Drawing.Point(17, 17);
+            this.labelNumPoints.Location = new System.Drawing.Point(23, 21);
+            this.labelNumPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNumPoints.Name = "labelNumPoints";
-            this.labelNumPoints.Size = new System.Drawing.Size(61, 25);
+            this.labelNumPoints.Size = new System.Drawing.Size(76, 29);
             this.labelNumPoints.TabIndex = 42;
             this.labelNumPoints.Text = "0.000";
             // 
@@ -736,27 +783,31 @@
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox6.Location = new System.Drawing.Point(255, 6);
+            this.groupBox6.Location = new System.Drawing.Point(340, 7);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(146, 57);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(195, 70);
             this.groupBox6.TabIndex = 55;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Current messurement ";
             // 
             // textBoxCurrenMes
             // 
-            this.textBoxCurrenMes.Location = new System.Drawing.Point(41, 23);
+            this.textBoxCurrenMes.Location = new System.Drawing.Point(55, 28);
+            this.textBoxCurrenMes.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCurrenMes.Name = "textBoxCurrenMes";
-            this.textBoxCurrenMes.Size = new System.Drawing.Size(65, 21);
+            this.textBoxCurrenMes.Size = new System.Drawing.Size(85, 24);
             this.textBoxCurrenMes.TabIndex = 46;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(108, 21);
+            this.label12.Location = new System.Drawing.Point(144, 26);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 25);
+            this.label12.Size = new System.Drawing.Size(30, 29);
             this.label12.TabIndex = 45;
             this.label12.Text = "A";
             // 
@@ -764,18 +815,20 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(6, 21);
+            this.label14.Location = new System.Drawing.Point(8, 26);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 25);
+            this.label14.Size = new System.Drawing.Size(34, 29);
             this.label14.TabIndex = 41;
             this.label14.Text = "I=";
             // 
             // buttonSaveCalib
             // 
             this.buttonSaveCalib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveCalib.Location = new System.Drawing.Point(126, 69);
+            this.buttonSaveCalib.Location = new System.Drawing.Point(168, 85);
+            this.buttonSaveCalib.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSaveCalib.Name = "buttonSaveCalib";
-            this.buttonSaveCalib.Size = new System.Drawing.Size(112, 23);
+            this.buttonSaveCalib.Size = new System.Drawing.Size(149, 28);
             this.buttonSaveCalib.TabIndex = 57;
             this.buttonSaveCalib.Text = "SAVE";
             this.buttonSaveCalib.UseVisualStyleBackColor = true;
@@ -784,9 +837,10 @@
             // buttonAddCalib
             // 
             this.buttonAddCalib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddCalib.Location = new System.Drawing.Point(9, 69);
+            this.buttonAddCalib.Location = new System.Drawing.Point(12, 85);
+            this.buttonAddCalib.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddCalib.Name = "buttonAddCalib";
-            this.buttonAddCalib.Size = new System.Drawing.Size(110, 23);
+            this.buttonAddCalib.Size = new System.Drawing.Size(147, 28);
             this.buttonAddCalib.TabIndex = 56;
             this.buttonAddCalib.Text = "Add calib point";
             this.buttonAddCalib.UseVisualStyleBackColor = true;
@@ -799,9 +853,11 @@
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.buttonRestore);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox5.Location = new System.Drawing.Point(9, 8);
+            this.groupBox5.Location = new System.Drawing.Point(12, 10);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(229, 55);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(305, 68);
             this.groupBox5.TabIndex = 51;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Current measurement code";
@@ -810,9 +866,10 @@
             // 
             this.labelCurrentCode.AutoSize = true;
             this.labelCurrentCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCurrentCode.Location = new System.Drawing.Point(28, 24);
+            this.labelCurrentCode.Location = new System.Drawing.Point(37, 30);
+            this.labelCurrentCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrentCode.Name = "labelCurrentCode";
-            this.labelCurrentCode.Size = new System.Drawing.Size(39, 16);
+            this.labelCurrentCode.Size = new System.Drawing.Size(49, 20);
             this.labelCurrentCode.TabIndex = 46;
             this.labelCurrentCode.Text = "0.000";
             // 
@@ -820,18 +877,20 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(6, 19);
+            this.label13.Location = new System.Drawing.Point(8, 23);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 25);
+            this.label13.Size = new System.Drawing.Size(34, 29);
             this.label13.TabIndex = 41;
             this.label13.Text = "I=";
             // 
             // buttonRestore
             // 
             this.buttonRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRestore.Location = new System.Drawing.Point(158, 22);
+            this.buttonRestore.Location = new System.Drawing.Point(211, 27);
+            this.buttonRestore.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRestore.Name = "buttonRestore";
-            this.buttonRestore.Size = new System.Drawing.Size(65, 23);
+            this.buttonRestore.Size = new System.Drawing.Size(87, 28);
             this.buttonRestore.TabIndex = 47;
             this.buttonRestore.Text = "Restore";
             this.buttonRestore.UseVisualStyleBackColor = true;
@@ -846,10 +905,11 @@
             this.tabPage5.Controls.Add(this.calibGrid);
             this.tabPage5.Controls.Add(this.groupBox8);
             this.tabPage5.Controls.Add(this.groupBox10);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(829, 515);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Size = new System.Drawing.Size(1108, 637);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Calib with voltmeter";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -857,65 +917,72 @@
             // groupBox9
             // 
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox9.Controls.Add(this.buttonStartCalib);
-            this.groupBox9.Controls.Add(this.buttonStopCalib);
+            this.groupBox9.Controls.Add(this.buttonStartCollect);
             this.groupBox9.Controls.Add(this.buttonCalc);
+            this.groupBox9.Controls.Add(this.buttonStopCollect);
             this.groupBox9.Controls.Add(this.buttonRemoveCalibPoint);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox9.Location = new System.Drawing.Point(9, 6);
+            this.groupBox9.Location = new System.Drawing.Point(12, 7);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(200, 126);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Size = new System.Drawing.Size(267, 152);
             this.groupBox9.TabIndex = 70;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Calib processing";
             // 
-            // buttonStartCalib
+            // buttonStartCollect
             // 
-            this.buttonStartCalib.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonStartCalib.AutoSize = true;
-            this.buttonStartCalib.BackColor = System.Drawing.Color.Yellow;
-            this.buttonStartCalib.Location = new System.Drawing.Point(6, 59);
-            this.buttonStartCalib.Name = "buttonStartCalib";
-            this.buttonStartCalib.Size = new System.Drawing.Size(80, 25);
-            this.buttonStartCalib.TabIndex = 72;
-            this.buttonStartCalib.Text = "Start collect";
-            this.buttonStartCalib.UseVisualStyleBackColor = false;
-            this.buttonStartCalib.CheckedChanged += new System.EventHandler(this.buttonStatCalib_CheckedChanged);
-            // 
-            // buttonStopCalib
-            // 
-            this.buttonStopCalib.Appearance = System.Windows.Forms.Appearance.Button;
-            this.buttonStopCalib.AutoSize = true;
-            this.buttonStopCalib.BackColor = System.Drawing.Color.Yellow;
-            this.buttonStopCalib.Checked = true;
-            this.buttonStopCalib.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.buttonStopCalib.Location = new System.Drawing.Point(6, 23);
-            this.buttonStopCalib.Name = "buttonStopCalib";
-            this.buttonStopCalib.Size = new System.Drawing.Size(80, 25);
-            this.buttonStopCalib.TabIndex = 71;
-            this.buttonStopCalib.Text = "Stop collect";
-            this.buttonStopCalib.UseVisualStyleBackColor = false;
-            this.buttonStopCalib.CheckedChanged += new System.EventHandler(this.buttonStopCalib_CheckedChanged);
+            this.buttonStartCollect.Appearance = System.Windows.Forms.Appearance.Button;
+            this.buttonStartCollect.AutoSize = true;
+            this.buttonStartCollect.BackColor = System.Drawing.Color.Yellow;
+            this.buttonStartCollect.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonStartCollect.Location = new System.Drawing.Point(8, 55);
+            this.buttonStartCollect.Name = "buttonStartCollect";
+            this.buttonStartCollect.Size = new System.Drawing.Size(96, 28);
+            this.buttonStartCollect.TabIndex = 72;
+            this.buttonStartCollect.Text = "Start collect";
+            this.buttonStartCollect.UseVisualStyleBackColor = false;
+            this.buttonStartCollect.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // buttonCalc
             // 
             this.buttonCalc.BackColor = System.Drawing.Color.Lime;
+            this.buttonCalc.Enabled = false;
             this.buttonCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCalc.Location = new System.Drawing.Point(111, 23);
+            this.buttonCalc.Location = new System.Drawing.Point(148, 22);
+            this.buttonCalc.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalc.Name = "buttonCalc";
-            this.buttonCalc.Size = new System.Drawing.Size(79, 60);
+            this.buttonCalc.Size = new System.Drawing.Size(105, 60);
             this.buttonCalc.TabIndex = 65;
             this.buttonCalc.Text = "Calc";
             this.buttonCalc.UseVisualStyleBackColor = false;
             this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
             // 
+            // buttonStopCollect
+            // 
+            this.buttonStopCollect.Appearance = System.Windows.Forms.Appearance.Button;
+            this.buttonStopCollect.AutoSize = true;
+            this.buttonStopCollect.BackColor = System.Drawing.Color.Yellow;
+            this.buttonStopCollect.Checked = true;
+            this.buttonStopCollect.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonStopCollect.Location = new System.Drawing.Point(8, 22);
+            this.buttonStopCollect.Name = "buttonStopCollect";
+            this.buttonStopCollect.Size = new System.Drawing.Size(96, 28);
+            this.buttonStopCollect.TabIndex = 71;
+            this.buttonStopCollect.TabStop = true;
+            this.buttonStopCollect.Text = "Stop collect";
+            this.buttonStopCollect.UseVisualStyleBackColor = false;
+            this.buttonStopCollect.CheckedChanged += new System.EventHandler(this.buttonStopCallect_CheckedChanged);
+            // 
             // buttonRemoveCalibPoint
             // 
             this.buttonRemoveCalibPoint.BackColor = System.Drawing.Color.Red;
             this.buttonRemoveCalibPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemoveCalibPoint.Location = new System.Drawing.Point(6, 95);
+            this.buttonRemoveCalibPoint.Location = new System.Drawing.Point(8, 108);
+            this.buttonRemoveCalibPoint.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRemoveCalibPoint.Name = "buttonRemoveCalibPoint";
-            this.buttonRemoveCalibPoint.Size = new System.Drawing.Size(184, 23);
+            this.buttonRemoveCalibPoint.Size = new System.Drawing.Size(245, 28);
             this.buttonRemoveCalibPoint.TabIndex = 47;
             this.buttonRemoveCalibPoint.Text = "Remove all data";
             this.buttonRemoveCalibPoint.UseVisualStyleBackColor = false;
@@ -929,9 +996,11 @@
             this.groupBox12.Controls.Add(this.kLineKoef);
             this.groupBox12.Controls.Add(this.label27);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox12.Location = new System.Drawing.Point(444, 6);
+            this.groupBox12.Location = new System.Drawing.Point(592, 7);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(126, 126);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox12.Size = new System.Drawing.Size(168, 152);
             this.groupBox12.TabIndex = 69;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Line paramiters";
@@ -940,9 +1009,10 @@
             // 
             this.bLineKoef.AutoSize = true;
             this.bLineKoef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bLineKoef.Location = new System.Drawing.Point(37, 81);
+            this.bLineKoef.Location = new System.Drawing.Point(49, 100);
+            this.bLineKoef.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bLineKoef.Name = "bLineKoef";
-            this.bLineKoef.Size = new System.Drawing.Size(36, 16);
+            this.bLineKoef.Size = new System.Drawing.Size(42, 20);
             this.bLineKoef.TabIndex = 48;
             this.bLineKoef.Text = "NaN";
             // 
@@ -950,9 +1020,10 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(6, 76);
+            this.label29.Location = new System.Drawing.Point(8, 94);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(35, 25);
+            this.label29.Size = new System.Drawing.Size(42, 29);
             this.label29.TabIndex = 47;
             this.label29.Text = "b=";
             // 
@@ -960,9 +1031,10 @@
             // 
             this.kLineKoef.AutoSize = true;
             this.kLineKoef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kLineKoef.Location = new System.Drawing.Point(37, 38);
+            this.kLineKoef.Location = new System.Drawing.Point(49, 47);
+            this.kLineKoef.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.kLineKoef.Name = "kLineKoef";
-            this.kLineKoef.Size = new System.Drawing.Size(36, 16);
+            this.kLineKoef.Size = new System.Drawing.Size(42, 20);
             this.kLineKoef.TabIndex = 46;
             this.kLineKoef.Text = "NaN";
             // 
@@ -970,9 +1042,10 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(6, 33);
+            this.label27.Location = new System.Drawing.Point(8, 41);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 25);
+            this.label27.Size = new System.Drawing.Size(41, 29);
             this.label27.TabIndex = 41;
             this.label27.Text = "k=";
             // 
@@ -992,9 +1065,11 @@
             this.groupBox11.Controls.Add(this.calibModBusFun);
             this.groupBox11.Controls.Add(this.label23);
             this.groupBox11.Controls.Add(this.label24);
-            this.groupBox11.Location = new System.Drawing.Point(624, 6);
+            this.groupBox11.Location = new System.Drawing.Point(832, 7);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(177, 256);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox11.Size = new System.Drawing.Size(236, 315);
             this.groupBox11.TabIndex = 68;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Calibration process paramiters";
@@ -1024,9 +1099,10 @@
             "180",
             "190",
             "200"});
-            this.calibNumPoinCalib.Location = new System.Drawing.Point(11, 185);
+            this.calibNumPoinCalib.Location = new System.Drawing.Point(15, 228);
+            this.calibNumPoinCalib.Margin = new System.Windows.Forms.Padding(4);
             this.calibNumPoinCalib.Name = "calibNumPoinCalib";
-            this.calibNumPoinCalib.Size = new System.Drawing.Size(159, 21);
+            this.calibNumPoinCalib.Size = new System.Drawing.Size(211, 24);
             this.calibNumPoinCalib.TabIndex = 45;
             this.calibNumPoinCalib.Text = "10";
             // 
@@ -1035,17 +1111,19 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(8, 169);
+            this.label17.Location = new System.Drawing.Point(11, 208);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(152, 13);
+            this.label17.Size = new System.Drawing.Size(195, 17);
             this.label17.TabIndex = 44;
             this.label17.Text = "Num point for one current";
             // 
             // calibMBBAddress
             // 
-            this.calibMBBAddress.Location = new System.Drawing.Point(118, 55);
+            this.calibMBBAddress.Location = new System.Drawing.Point(157, 68);
+            this.calibMBBAddress.Margin = new System.Windows.Forms.Padding(4);
             this.calibMBBAddress.Name = "calibMBBAddress";
-            this.calibMBBAddress.Size = new System.Drawing.Size(52, 20);
+            this.calibMBBAddress.Size = new System.Drawing.Size(68, 22);
             this.calibMBBAddress.TabIndex = 43;
             this.calibMBBAddress.Text = "1";
             // 
@@ -1054,33 +1132,37 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(3, 59);
+            this.label25.Location = new System.Drawing.Point(4, 73);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(95, 13);
+            this.label25.Size = new System.Drawing.Size(120, 17);
             this.label25.TabIndex = 42;
             this.label25.Text = "Device address";
             // 
             // calibVoltAddres
             // 
-            this.calibVoltAddres.Location = new System.Drawing.Point(118, 23);
+            this.calibVoltAddres.Location = new System.Drawing.Point(157, 28);
+            this.calibVoltAddres.Margin = new System.Windows.Forms.Padding(4);
             this.calibVoltAddres.Name = "calibVoltAddres";
-            this.calibVoltAddres.Size = new System.Drawing.Size(52, 20);
+            this.calibVoltAddres.Size = new System.Drawing.Size(68, 22);
             this.calibVoltAddres.TabIndex = 41;
             this.calibVoltAddres.Text = "2";
             // 
             // calibNumReg
             // 
-            this.calibNumReg.Location = new System.Drawing.Point(93, 139);
+            this.calibNumReg.Location = new System.Drawing.Point(124, 171);
+            this.calibNumReg.Margin = new System.Windows.Forms.Padding(4);
             this.calibNumReg.Name = "calibNumReg";
-            this.calibNumReg.Size = new System.Drawing.Size(78, 20);
+            this.calibNumReg.Size = new System.Drawing.Size(103, 22);
             this.calibNumReg.TabIndex = 41;
-            this.calibNumReg.Text = "2";
+            this.calibNumReg.Text = "6";
             // 
             // calibModBusRegAddress
             // 
-            this.calibModBusRegAddress.Location = new System.Drawing.Point(9, 139);
+            this.calibModBusRegAddress.Location = new System.Drawing.Point(12, 171);
+            this.calibModBusRegAddress.Margin = new System.Windows.Forms.Padding(4);
             this.calibModBusRegAddress.Name = "calibModBusRegAddress";
-            this.calibModBusRegAddress.Size = new System.Drawing.Size(78, 20);
+            this.calibModBusRegAddress.Size = new System.Drawing.Size(103, 22);
             this.calibModBusRegAddress.TabIndex = 40;
             this.calibModBusRegAddress.Text = "529";
             // 
@@ -1089,9 +1171,10 @@
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(90, 123);
+            this.label21.Location = new System.Drawing.Point(120, 151);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 13);
+            this.label21.Size = new System.Drawing.Size(74, 17);
             this.label21.TabIndex = 39;
             this.label21.Text = "NumData";
             // 
@@ -1100,9 +1183,10 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(6, 123);
+            this.label22.Location = new System.Drawing.Point(8, 151);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(79, 13);
+            this.label22.Size = new System.Drawing.Size(101, 17);
             this.label22.TabIndex = 33;
             this.label22.Text = "DataAddress";
             // 
@@ -1110,11 +1194,12 @@
             // 
             this.buttonAddCalibRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddCalibRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddCalibRequest.Location = new System.Drawing.Point(9, 223);
+            this.buttonAddCalibRequest.Location = new System.Drawing.Point(12, 274);
+            this.buttonAddCalibRequest.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddCalibRequest.Name = "buttonAddCalibRequest";
-            this.buttonAddCalibRequest.Size = new System.Drawing.Size(161, 26);
+            this.buttonAddCalibRequest.Size = new System.Drawing.Size(215, 32);
             this.buttonAddCalibRequest.TabIndex = 1;
-            this.buttonAddCalibRequest.Text = "Add Request";
+            this.buttonAddCalibRequest.Text = "START CALIB";
             this.buttonAddCalibRequest.UseVisualStyleBackColor = true;
             this.buttonAddCalibRequest.Click += new System.EventHandler(this.buttonAddCalibRequest_Click);
             // 
@@ -1128,9 +1213,10 @@
             "3",
             "4",
             "5"});
-            this.calibModBusFun.Location = new System.Drawing.Point(118, 88);
+            this.calibModBusFun.Location = new System.Drawing.Point(157, 108);
+            this.calibModBusFun.Margin = new System.Windows.Forms.Padding(4);
             this.calibModBusFun.Name = "calibModBusFun";
-            this.calibModBusFun.Size = new System.Drawing.Size(52, 21);
+            this.calibModBusFun.Size = new System.Drawing.Size(68, 24);
             this.calibModBusFun.TabIndex = 31;
             this.calibModBusFun.Text = "3";
             // 
@@ -1139,9 +1225,10 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(3, 27);
+            this.label23.Location = new System.Drawing.Point(4, 33);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(108, 13);
+            this.label23.Size = new System.Drawing.Size(140, 17);
             this.label23.TabIndex = 3;
             this.label23.Text = "Voltmeter address";
             // 
@@ -1150,9 +1237,10 @@
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(4, 93);
+            this.label24.Location = new System.Drawing.Point(5, 114);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.Size = new System.Drawing.Size(70, 17);
             this.label24.TabIndex = 32;
             this.label24.Text = "Function";
             // 
@@ -1160,9 +1248,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(190, 145);
+            this.label15.Location = new System.Drawing.Point(253, 178);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(198, 25);
+            this.label15.Size = new System.Drawing.Size(255, 29);
             this.label15.TabIndex = 67;
             this.label15.Text = "Table calibration data";
             // 
@@ -1175,11 +1264,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn2,
             this.Column2});
-            this.calibGrid.Location = new System.Drawing.Point(9, 176);
+            this.calibGrid.Location = new System.Drawing.Point(12, 217);
+            this.calibGrid.Margin = new System.Windows.Forms.Padding(4);
             this.calibGrid.Name = "calibGrid";
             this.calibGrid.ReadOnly = true;
             this.calibGrid.RowHeadersVisible = false;
-            this.calibGrid.Size = new System.Drawing.Size(561, 331);
+            this.calibGrid.Size = new System.Drawing.Size(748, 407);
             this.calibGrid.TabIndex = 66;
             // 
             // dataGridViewTextBoxColumn1
@@ -1221,13 +1311,15 @@
             // 
             this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Controls.Add(this.numTempPoint);
+            this.groupBox8.Controls.Add(this.lableNumTempPoint);
             this.groupBox8.Controls.Add(this.label18);
-            this.groupBox8.Controls.Add(this.numGlobalPoint);
+            this.groupBox8.Controls.Add(this.lableNumGlobalPoint);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox8.Location = new System.Drawing.Point(238, 6);
+            this.groupBox8.Location = new System.Drawing.Point(317, 7);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(175, 75);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Size = new System.Drawing.Size(233, 92);
             this.groupBox8.TabIndex = 65;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Num points";
@@ -1236,50 +1328,56 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(12, 43);
+            this.label20.Location = new System.Drawing.Point(16, 53);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 25);
+            this.label20.Size = new System.Drawing.Size(85, 29);
             this.label20.TabIndex = 50;
             this.label20.Text = "Temp:";
             // 
-            // numTempPoint
+            // lableNumTempPoint
             // 
-            this.numTempPoint.AutoSize = true;
-            this.numTempPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numTempPoint.Location = new System.Drawing.Point(92, 43);
-            this.numTempPoint.Name = "numTempPoint";
-            this.numTempPoint.Size = new System.Drawing.Size(23, 25);
-            this.numTempPoint.TabIndex = 49;
-            this.numTempPoint.Text = "0";
+            this.lableNumTempPoint.AutoSize = true;
+            this.lableNumTempPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lableNumTempPoint.Location = new System.Drawing.Point(123, 53);
+            this.lableNumTempPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lableNumTempPoint.Name = "lableNumTempPoint";
+            this.lableNumTempPoint.Size = new System.Drawing.Size(27, 29);
+            this.lableNumTempPoint.TabIndex = 49;
+            this.lableNumTempPoint.Text = "0";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(12, 18);
+            this.label18.Location = new System.Drawing.Point(16, 22);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 25);
+            this.label18.Size = new System.Drawing.Size(93, 29);
             this.label18.TabIndex = 48;
             this.label18.Text = "Global:";
             // 
-            // numGlobalPoint
+            // lableNumGlobalPoint
             // 
-            this.numGlobalPoint.AutoSize = true;
-            this.numGlobalPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numGlobalPoint.Location = new System.Drawing.Point(92, 18);
-            this.numGlobalPoint.Name = "numGlobalPoint";
-            this.numGlobalPoint.Size = new System.Drawing.Size(23, 25);
-            this.numGlobalPoint.TabIndex = 42;
-            this.numGlobalPoint.Text = "0";
+            this.lableNumGlobalPoint.AutoSize = true;
+            this.lableNumGlobalPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lableNumGlobalPoint.Location = new System.Drawing.Point(123, 22);
+            this.lableNumGlobalPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lableNumGlobalPoint.Name = "lableNumGlobalPoint";
+            this.lableNumGlobalPoint.Size = new System.Drawing.Size(27, 29);
+            this.lableNumGlobalPoint.TabIndex = 42;
+            this.lableNumGlobalPoint.Text = "0";
             // 
             // groupBox10
             // 
             this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox10.Controls.Add(this.calibMBBCode);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox10.Location = new System.Drawing.Point(236, 94);
+            this.groupBox10.Location = new System.Drawing.Point(314, 112);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(177, 38);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Size = new System.Drawing.Size(236, 47);
             this.groupBox10.TabIndex = 61;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Current measurement code";
@@ -1288,9 +1386,10 @@
             // 
             this.calibMBBCode.AutoSize = true;
             this.calibMBBCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.calibMBBCode.Location = new System.Drawing.Point(10, 17);
+            this.calibMBBCode.Location = new System.Drawing.Point(13, 21);
+            this.calibMBBCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.calibMBBCode.Name = "calibMBBCode";
-            this.calibMBBCode.Size = new System.Drawing.Size(39, 16);
+            this.calibMBBCode.Size = new System.Drawing.Size(49, 20);
             this.calibMBBCode.TabIndex = 46;
             this.calibMBBCode.Text = "0.000";
             // 
@@ -1299,9 +1398,10 @@
             this.buttonAddPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddPoint.Enabled = false;
             this.buttonAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddPoint.Location = new System.Drawing.Point(343, 588);
+            this.buttonAddPoint.Location = new System.Drawing.Point(457, 724);
+            this.buttonAddPoint.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddPoint.Name = "buttonAddPoint";
-            this.buttonAddPoint.Size = new System.Drawing.Size(103, 25);
+            this.buttonAddPoint.Size = new System.Drawing.Size(137, 31);
             this.buttonAddPoint.TabIndex = 52;
             this.buttonAddPoint.Text = "Add new point";
             this.buttonAddPoint.UseVisualStyleBackColor = true;
@@ -1313,9 +1413,10 @@
             this.checkBoxSelAddMode.AutoSize = true;
             this.checkBoxSelAddMode.Checked = true;
             this.checkBoxSelAddMode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSelAddMode.Location = new System.Drawing.Point(344, 565);
+            this.checkBoxSelAddMode.Location = new System.Drawing.Point(459, 695);
+            this.checkBoxSelAddMode.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxSelAddMode.Name = "checkBoxSelAddMode";
-            this.checkBoxSelAddMode.Size = new System.Drawing.Size(95, 17);
+            this.checkBoxSelAddMode.Size = new System.Drawing.Size(122, 21);
             this.checkBoxSelAddMode.TabIndex = 53;
             this.checkBoxSelAddMode.Text = "Auto add point";
             this.checkBoxSelAddMode.UseVisualStyleBackColor = true;
@@ -1325,9 +1426,10 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(470, 565);
+            this.button1.Location = new System.Drawing.Point(627, 695);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 53);
+            this.button1.Size = new System.Drawing.Size(224, 65);
             this.button1.TabIndex = 54;
             this.button1.Text = "Clear chart";
             this.button1.UseVisualStyleBackColor = false;
@@ -1335,9 +1437,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 636);
+            this.ClientSize = new System.Drawing.Size(1392, 783);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBoxSelAddMode);
             this.Controls.Add(this.buttonAddPoint);
@@ -1348,6 +1450,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -1461,7 +1564,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView calibGrid;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label numGlobalPoint;
+        private System.Windows.Forms.Label lableNumGlobalPoint;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label calibMBBCode;
         private System.Windows.Forms.Button buttonRemoveCalibPoint;
@@ -1484,18 +1587,18 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button buttonCalc;
-        private System.Windows.Forms.CheckBox buttonStopCalib;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.CheckBox buttonStartCalib;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox calibNumPoinCalib;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label numTempPoint;
+        private System.Windows.Forms.Label lableNumTempPoint;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RadioButton buttonStopCollect;
+        private System.Windows.Forms.RadioButton buttonStartCollect;
     }
 }
 

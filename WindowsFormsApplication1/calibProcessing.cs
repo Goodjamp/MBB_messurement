@@ -30,7 +30,7 @@ namespace MBB_8_1_config
             {
                 return;
             }
-            
+            maxNumberTempData = inMaxNumberTempData;
             globRezMes = new List<List<double>>();
         }
 
@@ -50,26 +50,28 @@ namespace MBB_8_1_config
 
 
 
-        public void addNewData(int reqNumber, double rezMes, double rezCode) 
+        public bool addNewData(int reqNumber, double rezMes, double rezCode, ref int pointTemp, ref int pointGlobal, 
+                               ref double currentVoltmeter, ref double currentMBB, ref double code, ref double diffCurrent) 
         {
             mutexProtectAxccess.WaitOne();
             // if calibration on one point complite - waite next point 
             if (counterTempData >= maxNumberTempData) 
             {
                 mutexProtectAxccess.ReleaseMutex();
-                return; 
+                return false; 
             }
             //data from voltmeter
             if (reqNumber == 0) 
             {
                 tempRezMes.Clear();
             }
-            else if (reqNumber == 1) // data from MBB
+            // data from MBB
+            else if (reqNumber == 1) 
             {
                 if (tempRezMes.Count == 0)
                 {
                     mutexProtectAxccess.ReleaseMutex();
-                    return;
+                    return false;
                 }
             }
             else 
@@ -78,7 +80,7 @@ namespace MBB_8_1_config
                 if (tempRezMes.Count == 0)
                 {
                     mutexProtectAxccess.ReleaseMutex();
-                    return;
+                    return false;
                 }
             }
             //add new data
@@ -88,22 +90,30 @@ namespace MBB_8_1_config
             if (tempRezMes.Count < 2)  
             {
                 mutexProtectAxccess.ReleaseMutex();
-                return;
+                return false;
             }
             if ((tempRezMes.ElementAt(posVoltmeter)[posCurrent] - tempRezMes.ElementAt(posVoltmeter)[posVoltmeter]) > maxCurrentDiff) 
             {
                 tempRezMes.Clear();
                 mutexProtectAxccess.ReleaseMutex();
-                return;
+                return false;
             }
             // Add new data to the global list
             globRezMes.Add(new List<double>());
             globRezMes.ElementAt(globRezMes.Count - 1).Add(tempRezMes.ElementAt(posMBB)[posCode]);
-            globRezMes.ElementAt(globRezMes.Count - 1).Add(tempRezMes.ElementAt(posVoltmeter)[posCurrent]);
+            globRezMes.ElementAt(globRezMes.Count - 1).Add(tempRezMes.ElementAt(posVoltmeter)[posCurrent]);        
+            // return messurement data
+            pointTemp = counterTempData;
+            pointGlobal = globRezMes.Count;
+            currentVoltmeter = tempRezMes.ElementAt(posVoltmeter)[posCurrent];
+            currentMBB = tempRezMes.ElementAt(posMBB)[posCurrent];
+            code = tempRezMes.ElementAt(posMBB)[posCode];
+            diffCurrent = tempRezMes.ElementAt(posVoltmeter)[posCurrent] - tempRezMes.ElementAt(posMBB)[posCurrent];
             //
             counterTempData++;
             tempRezMes.Clear();
             mutexProtectAxccess.ReleaseMutex();
+            return true;
         }
 
         //
@@ -139,10 +149,47 @@ namespace MBB_8_1_config
         }
 
         // Get line coefficient
-        public void calcLineCoef(ref double kLineCoef, ref double bLineCoef) 
+        public void getLineCoef(ref double kLineCoef, ref double bLineCoef) 
         {
             kLineCoef = k_line;
             bLineCoef = b_line;
+        }
+
+
+        public int getCurrentTempPoint() 
+        { 
+            int currentTempPoint;
+             mutexProtectAxccess.WaitOne();
+             currentTempPoint = counterTempData;
+             mutexProtectAxccess.ReleaseMutex();
+            return currentTempPoint;
+        }
+
+        public int getCurrentGloabPoint()
+        {
+            int currentCloabPoint;
+            mutexProtectAxccess.WaitOne();
+            currentCloabPoint = globRezMes.Count;
+            mutexProtectAxccess.ReleaseMutex();
+            return currentCloabPoint;
+        }
+
+        public bool getCurrentPointFull()
+        {
+            if (counterTempData >= maxNumberTempData)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        public void clearTempCounter()
+        {
+            mutexProtectAxccess.WaitOne();
+            counterTempData = 0;
+            mutexProtectAxccess.ReleaseMutex();
+            
         }
 
     }

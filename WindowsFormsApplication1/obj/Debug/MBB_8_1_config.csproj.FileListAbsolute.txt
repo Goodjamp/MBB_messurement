@@ -7,3 +7,12 @@ D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFo
 D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 D:\Privat1\Programing_example\System\Примеры C#\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.csprojResolveAssemblyReference.cache
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.Form1.resources
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.csproj.GenerateResource.Cache
+C:\Users\Gerasimchuk\Desktop\MBB Messurement\WindowsFormsApplication1\obj\Debug\MBB_8_1_config.csprojResolveAssemblyReference.cache
